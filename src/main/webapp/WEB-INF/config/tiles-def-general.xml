@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+
+	<definition name=".DefaultTheme"
+		template="/WEB-INF/views/templates/default_layout.jsp">
+		<put-attribute name="title" value="SB Template" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/templates/header.jsp" />
+		<put-attribute name="sidebar"
+			value="/WEB-INF/views/templates/sidebar.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/templates/footer.jsp" />
+	</definition>
+
+	<definition name=".RegisterTheme"
+		template="/WEB-INF/views/templates/register_layout.jsp">
+		<put-attribute name="title" value="SB Template" />
+	</definition>
+	
+	<definition name=".LoginTheme"
+		template="/WEB-INF/views/templates/login_layout.jsp">
+		<put-attribute name="title" value="SB Template" />
+	</definition>
+
+	<definition name=".Index" extends=".DefaultTheme">
+		<put-attribute name="body"
+			value="/WEB-INF/views/index.jsp" />
+	</definition>
+	
+		<definition name=".RecentReports" extends=".DefaultTheme">
+		<put-attribute name="body"
+			value="/WEB-INF/views/recentreports.jsp" />
+	</definition>
+
+
+
+	<definition name=".Registration" extends=".RegisterTheme">
+		<put-attribute name="body"
+			value="/WEB-INF/views/register.jsp" />
+	</definition>
+
+
+	<definition name=".Login" extends=".LoginTheme">
+		<put-attribute name="body"
+			value="/WEB-INF/views/login.jsp" />
+	</definition>
+	
+		<definition name=".Welcome" extends=".DefaultTheme">		
+		<put-attribute name="body"
+			value="/WEB-INF/views/starter.jsp" />		
+	</definition>
+
+	
+
+</tiles-definitions>
