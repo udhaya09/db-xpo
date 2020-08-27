@@ -64,7 +64,13 @@ public class ExportServiceImpl implements ExportService{
 		    while (rs.next()){
 		        XSSFRow row = sheet.createRow((short) i);
 		        for (int j = 0; j < columnCount; j++) {
-		        	row.createCell((short)j).setCellValue(rs.getString(j+1));
+		        	if(rs.getString(j+1)==null || rs.getString(j+1).equals("")) {
+		        		row.createCell((short)j).setCellValue("null");
+		        	}else {
+		        		row.createCell((short)j).setCellValue(rs.getString(j+1));
+		        	}
+		        	
+		        	
 				}		        
 		        i++;
 		    }
